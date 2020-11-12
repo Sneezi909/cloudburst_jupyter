@@ -1,0 +1,6 @@
+[submodule "anna"]
+	path = anna
+	url = https://github.com/hydro-project/anna
+[submodule "cloudburst"]
+	path = cloudburst
+	url = https://github.com/hydro-project/cloudburst
