@@ -67,10 +67,10 @@ def run_cell(droplet_client, code_str, namespace):
             # Convert the key into a global key.
             global_key = self._get_global_key(key)
             # Use this key to get the raw bytes from the KVS.
-            value_bytes = self.droplet_client.get(global_key)
-            if value_bytes is None: raise KeyError(key)
-            # Deserialize the value.
-            return cp.loads(value_bytes)
+            item  = self.droplet_client.get(global_key)
+            if item is None: raise KeyError(key)
+            # Deserialize not necessary?.
+            return item
 
         # key: str
         # value: any Python value
